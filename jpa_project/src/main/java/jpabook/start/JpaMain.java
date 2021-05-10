@@ -17,12 +17,13 @@ public class JpaMain {
         EntityTransaction tx = em.getTransaction(); //트랜잭션 기능 획득
 
         try {
+            Long id = 100L;
             tx.begin(); //트랜잭션 시작
 
-//            save(em);
-//            find(em);
-//            remove(em);
-            update(em);
+//            save(id , em);
+//            find(id , em);
+//            remove(id , em);
+            update(id , em);
 
             tx.commit();//트랜잭션 커밋
 
@@ -37,8 +38,7 @@ public class JpaMain {
     }
 
     // 등록
-    public static void save(EntityManager em) {
-        String id = "id2";
+    public static void save(Long id , EntityManager em) {
         Member member = new Member();
         member.setId(id);
         member.setName("ZZZ");
@@ -47,23 +47,20 @@ public class JpaMain {
     }
 
     // 조회
-    public static void find(EntityManager em) {
-        String id = "id1";
+    public static void find(Long id , EntityManager em) {
         Member findMember = em.find(Member.class , id);
         System.out.println("id: " + findMember.getId());
         System.out.println("name: " + findMember.getName());
     }
 
     // 삭제
-    public static void remove(EntityManager em) {
-        String id = "id1";
+    public static void remove(Long id , EntityManager em) {
         Member findMember = em.find(Member.class , id);
         em.remove(findMember);
     }
 
     // 수정
-    public static void update(EntityManager em) {
-        String id = "id1";
+    public static void update(Long id , EntityManager em) {
         Member findMember = em.find(Member.class , id);
         findMember.setName("updated Name");
     }

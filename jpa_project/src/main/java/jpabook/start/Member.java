@@ -12,17 +12,25 @@ public class Member {
 
     @Id
     @Column(name = "ID")
-    private String id;
+    private Long id;
 
     @Column(name = "NAME")
     private String name;
 
+    public Member() {
 
-    public String getId() {
+    }
+
+    public Member(Long id , String name) {
+        this.id = id;
+        this.name = name;
+    }
+
+    public Long getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
