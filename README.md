@@ -1,1 +1,2 @@
-# Spring_Data_Jpa-Study
+# 김영한의 JPA 스터디
+## 예제코드 정리
