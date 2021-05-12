@@ -1,8 +1,13 @@
 package jpabook.jpashop.domain;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
+@Getter
+@Setter
 @Entity
 @Table(name = "ORDERS")
 public class Order {
