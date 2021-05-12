@@ -1,4 +1,4 @@
-package jpabook.start;
+package jpabook.start.ex1;
 
 import javax.persistence.*;  //**
 

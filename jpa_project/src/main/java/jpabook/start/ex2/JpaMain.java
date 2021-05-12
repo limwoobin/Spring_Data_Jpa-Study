@@ -1,13 +1,15 @@
-package jpabook.start.persistence;
-
-import jpabook.start.Member;
+package jpabook.start.ex2;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 
-public class FlushTest {
+/**
+ * @author holyeye
+ */
+public class JpaMain {
+
     public static void main(String[] args) {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("jpabook");
         EntityManager em = emf.createEntityManager();
@@ -16,11 +18,6 @@ public class FlushTest {
         tx.begin();
 
         try {
-            Member member = new Member(200L , "flush Test");
-            em.persist(member);
-            em.flush();
-
-            System.out.println("====================================");
             tx.commit();
         } catch (Exception e) {
             e.printStackTrace();

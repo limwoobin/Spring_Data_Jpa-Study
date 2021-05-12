@@ -1,6 +1,6 @@
-package jpabook.start.persistence;
+package jpabook.start.ex1.persistence;
 
-import jpabook.start.Member;
+import jpabook.start.ex1.Member;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;

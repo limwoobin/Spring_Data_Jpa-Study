@@ -1,7 +1,6 @@
-package jpabook.start;
+package jpabook.start.ex1;
 
 import javax.persistence.*;
-import java.util.List;
 
 /**
  * @author holyeye
