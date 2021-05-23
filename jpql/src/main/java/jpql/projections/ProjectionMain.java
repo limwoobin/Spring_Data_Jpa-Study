@@ -1,5 +1,8 @@
-package jpql;
+package jpql.projections;
 
+import jpql.Address;
+import jpql.Member;
+import jpql.Team;
 import jpql.dto.MemberDTO;
 
 import javax.persistence.*;
